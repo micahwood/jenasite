@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'museo_sans_500regular';
+    src: url('../fonts/MuseoSans_500-webfont.eot');
+    src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
+         url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+         url('../fonts/MuseoSans_500-webfont.svg#museo_sans_500regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+	font-family: 'museo_sans_500regular', Helvetica, sans-serif;
+}
+
+nav ul {
+	width: 90%;
+	background-color: #ccc;
+}
+
+nav > ul > li {
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+}
+
+#images {
+	display: inline-block;
+	width: 90%;
+	margin-left: 25px;
+}
+
+#grid {
+	float: left;
+	border-right: 2px solid #000;
+}
+
+#large-image {
+	float: right;
+}
