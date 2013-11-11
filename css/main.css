@@ -10,19 +10,26 @@
 
 }
 
-body {
-	font-family: 'museo_sans_500regular', Helvetica, sans-serif;
+* {
+  font-family: 'museo_sans_500regular', Helvetica, sans-serif !important;
 }
 
-nav ul {
+body {
+}
+
+/*nav ul {
 	width: 90%;
-	background-color: #ccc;
 }
 
 nav > ul > li {
 	display: inline-block;
 	width: 33%;
 	text-align: center;
+}*/
+
+.full-width {
+  padding: 0 15px;
+  width: 100%;
 }
 
 #images {
