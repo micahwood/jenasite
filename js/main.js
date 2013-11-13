@@ -29,8 +29,8 @@ $(document).ready(function() {
 
   var hideResume = function hideResume() {
     if (resumeDisplayed) {
-      $resume.animate({top: '-100%'}, 800);
-      $navbar.animate({top: '0px'}, 800);
+      $resume.animate({top: '-100%'}, 600);
+      $navbar.animate({top: '0px'}, 600);
       resumeDisplayed = !resumeDisplayed;
     }
   };
