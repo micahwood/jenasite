@@ -27,6 +27,19 @@ nav > ul > li {
 	text-align: center;
 }*/
 
+ul.wider {
+  width: 70%;
+  text-align: center;
+}
+
+ul.wider > li {
+  width: 33%;
+}
+
+a.name {
+  font-size: 24px;
+}
+
 .full-width {
   padding: 0 15px;
   width: 100%;
@@ -45,4 +58,25 @@ nav > ul > li {
 
 #large-image {
 	float: right;
+}
+
+#resume {
+  padding: 0 15px;
+  position: absolute;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #bbb;
+}
+
+div.resume-body {
+  padding-top: 60px;
+}
+
+#resume p {
+}
+
+.navbar {
+  /*transition: all 1s;*/
+  z-index: 1000;
 }

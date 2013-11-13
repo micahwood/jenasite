@@ -1,71 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-		<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-	</head>
-	<body>
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-					<a class="navbar-brand">Jena Schmidt</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Gallery</a></li>
-						<li><a href="#">Artist</a></li><!-- contact/bio -->
-						<li><a href="#">Resume</a></li>
-					</ul>
-				</div>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand name">Jena Schmidt</a>
 			</div>
-		</nav>
-		<div id="images">
-			<section id="grid">
-				<table>
-					<tr>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-					</tr>
-					<tr>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-					</tr>
-					<tr>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-					</tr>
-					<tr>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-					</tr>
-					<tr>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-						<td><img src="http://placekitten.com/g/90/90" /></td>
-					</tr>
-				</table>
-			</section>
-			<section id="large-image">
-				<img src="http://placekitten.com/550/600" />
-			</section>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav wider">
+					<li class="active"><a href="#">Gallery</a></li>
+					<li><a href="#">Artist</a></li><!-- contact/bio -->
+					<li><a href="#" id="resume-nav">Resume</a></li>
+				</ul>
+			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	</body>
+	</nav>
+	<div id="images">
+		<section id="grid">
+			<table>
+				<tr>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+				</tr>
+				<tr>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+				</tr>
+				<tr>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+				</tr>
+				<tr>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+				</tr>
+				<tr>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+					<td><img src="http://placekitten.com/g/90/90" /></td>
+				</tr>
+			</table>
+		</section>
+		<section id="large-image">
+			<img src="http://placekitten.com/550/600" />
+		</section>
+	</div>
+	<section id="resume">
+		<div class="container resume-body">
+			<p align="justify">
+				Lorem ipsum dolor sit amet, aenean viverra volutpat etiam diam, arcu libero, justo in velit pede consectetuer, a mauris ullamcorper, facilisis nam nec. At enim feugiat, sit torquent, et vestibulum, incidunt sagittis non risus platea urna, et et tristique venenatis. Dis purus dictum metus ultricies, orci eu, incidunt nullam pellentesque aliquam interdum amet, elementum in eget malesuada sit tristique. Phasellus convallis venenatis bibendum leo in. Facilisis wisi est, faucibus mauris morbi imperdiet, integer mi at sodales semper, volutpat vehicula wisi neque nibh libero duis. Nec elit. Quisque orci rutrum dis dictumst, sodales vulputate, phasellus hendrerit eu fringilla wisi erat quis, elit magna, dolor sapien erat tortor urna. Wisi dapibus, felis dictumst eu, justo erat nam scelerisque in quis. Hendrerit nulla laoreet vel eu amet metus, rhoncus libero ut elit sed lacus, ut mollis eget lacinia dolor sit tristique. Non non nunc tellus ante vestibulum, mattis purus velit volutpat molestie, vitae tincidunt amet, adipiscing est aliquet tempus scelerisque tincidunt vivamus.
+			</p>
+			<p align="justify">
+				Laoreet eu risus, risus sed, ipsum nibh senectus nec odio. Sem et eu libero vestibulum amet in, orci tempus amet donec ut. Convallis ut nonummy condimentum, dictum pellentesque, sit diam id natoque, sit sed, platea rutrum erat. Tristique duis orci, in quis urna justo per aliquam donec, proin magna est, suspendisse neque ante id lacus proin, aliquet lacus ante tincidunt. Ut consectetuer porta, commodo erat euismod pede, at dolor sociis adipiscing in in. Ac aliquet. Nullam magna ut, quis sed amet a ac diam, ut nam cras ac eget turpis, eu vestibulum qui vehicula sapien, etiam aliquam est sed lectus. Arcu euismod quis cras purus, faucibus magna gravida est erat odio. Magna platea, donec sit parturient ullamcorper, nunc at urna in. Fermentum risus curae suspendisse elementum urna dictum. Lectus ligula diam amet vehicula cursus in.
+			</p>
+			<p align="justify">
+				Lacus molestie diam dictumst quisque suspendisse, cum consectetuer ipsum quam amet, a massa risus. Maecenas conubia, nunc donec vitae amet. Sapien sit aliquam eu nullam lacinia est, turpis interdum porttitor arcu. Sed elit. Sit nec dui, ullamco sollicitudin ipsum ut quis fusce, sed velit. Felis mi duis etiam, tellus adipiscing vulputate faucibus nec blandit, ut placerat elementum, mollis nunc eget amet dictum pulvinar. Dui sed, vel sollicitudin sit et nulla arcu, nibh quam lacus placerat. Massa ultrices at sit fringilla lorem enim, eget lacinia, in aliquam mauris neque, laoreet at sed nunc praesent mauris aliquam, pulvinar ut arcu duis magnis odio amet. Reiciendis maecenas, volutpat pede egestas sed, molestie gravida nisl euismod libero facilisis, pellentesque natoque lacus aenean.
+			</p>
+			<p align="justify">
+				Vestibulum platea in sodales scelerisque. Quis blandit, dolor anim eget. Vivamus sit, sem vehicula velit. Libero venenatis a at libero rutrum urna, vel at nec dictum, ultrices dolor aliquam. Lorem eu vestibulum imperdiet. Blandit per condimentum arcu, integer lorem eu. Posuere eget erat, wisi ante at, potenti ipsum commodo tellus. Ipsum morbi malesuada nibh felis. Elit ut maecenas nisl pellentesque lacus pede. Senectus sapien, integer mi consectetuer arcu mauris in sit, condimentum lacinia integer sit at ac. Tincidunt a sed sit, turpis et.
+			</p>
+		</div>
+	</section>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
 </html>
