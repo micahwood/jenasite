@@ -32,7 +32,7 @@ a.name {
 }
 
 img {
-  vertical-align: baseline;
+  /*vertical-align: baseline;*/
 }
 
 .full-width {
@@ -41,7 +41,6 @@ img {
 }
 
 #images {
-	/*display: inline-block;*/
 	width: 90%;
 	margin-left: 25px;
 }
@@ -53,9 +52,14 @@ ul.thumbs li {
 }
 
 #slideshow img {
-  width: 100%;
-  max-height: 700px;
-  overflow: hidden;
+  max-height: 89%;
+}
+
+#slideshow span.image-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #slideshow a {

@@ -57,11 +57,11 @@ $(document).ready(function() {
     numThumbs: 29,
     imageContainerSel: '#slideshow',
     loadingContainerSel: '#loading',
-    defaultTransitionDuration: 1000,
+    defaultTransitionDuration: 1400,
     renderSSControls: false,
     renderNavControls: false,
     enableBottomPager: false,
-    syncTransitions: false,
+    syncTransitions: true,
     onSlideChange: function(prevIndex, nextIndex) {
       this.find('ul.thumbs').children()
         .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
