@@ -41,9 +41,15 @@ img {
 }
 
 #images {
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 90%;
 	margin-left: 25px;
+}
+
+ul.thumbs li {
+  list-style: none;
+  float: left;
+  padding: 5px;
 }
 
 #grid {
