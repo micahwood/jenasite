@@ -65,6 +65,9 @@ img {
 
 div.resume-body {
   padding-top: 60px;
+  column-count: 2;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
 }
 
 #resume p {
