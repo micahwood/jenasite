@@ -53,22 +53,24 @@ $(document).ready(function() {
   });
 
   $('#thumbs').galleriffic({
-    delay: 1500,
+    delay: 2500,
     numThumbs: 29,
     imageContainerSel: '#slideshow',
+    loadingContainerSel: '#loading',
+    defaultTransitionDuration: 1000,
     renderSSControls: false,
     renderNavControls: false,
     enableBottomPager: false,
-    loadingContainerSel: '#loading',
+    syncTransitions: false,
     onSlideChange: function(prevIndex, nextIndex) {
       this.find('ul.thumbs').children()
         .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
         .eq(nextIndex).fadeTo('fast', 1.0);
     },
-    onPageTransitionOut:       function(callback) {
+    onPageTransitionOut: function(callback) {
       this.fadeTo('fast', 0.0, callback);
     },
-    onPageTransitionIn:        function() {
+    onPageTransitionIn: function() {
       this.fadeTo('fast', 1.0);
     }
   });

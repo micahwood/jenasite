@@ -49,14 +49,20 @@ img {
 ul.thumbs li {
   list-style: none;
   float: left;
-  padding: 5px;
+  padding: 3px;
+}
+
+#slideshow img {
+  width: 100%;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+#slideshow a {
+  text-decoration: none;
 }
 
 #grid {
-}
-
-#large-image {
-	/*float: right;*/
 }
 
 #resume {
