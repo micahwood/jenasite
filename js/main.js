@@ -44,5 +44,33 @@ $(document).ready(function() {
     }
   };
 
-});
+  var onMouseOutOpacity = 0.67;
+  $('#thumbs ul.thumbs li').opacityrollover({
+    mouseOutOpacity:   onMouseOutOpacity,
+    mouseOverOpacity:  1.0,
+    fadeSpeed:         'fast',
+    exemptionSelector: '.selected'
+  });
 
+  $('#thumbs').galleriffic({
+    delay: 1500,
+    numThumbs: 29,
+    imageContainerSel: '#slideshow',
+    renderSSControls: false,
+    renderNavControls: false,
+    enableBottomPager: false,
+    loadingContainerSel: '#loading',
+    onSlideChange: function(prevIndex, nextIndex) {
+      this.find('ul.thumbs').children()
+        .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+        .eq(nextIndex).fadeTo('fast', 1.0);
+    },
+    onPageTransitionOut:       function(callback) {
+      this.fadeTo('fast', 0.0, callback);
+    },
+    onPageTransitionIn:        function() {
+      this.fadeTo('fast', 1.0);
+    }
+  });
+
+});
