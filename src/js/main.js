@@ -3,7 +3,9 @@ $(document).ready(function() {
   var $resume = $('#resume'),
       $navbar = $('.navbar'),
       $gallery = $('#gallery'),
-      resumeDisplayed = false;
+      $thumbs = $('#thumbs'),
+      resumeDisplayed = false,
+      onMouseOutOpacity = 0.47;
 
   $('.nav').on('click', 'li', function(event) {
     var target = event.target.text;
@@ -44,7 +46,6 @@ $(document).ready(function() {
     }
   };
 
-  var onMouseOutOpacity = 0.47;
   $('#thumbs ul.thumbs li').opacityrollover({
     mouseOutOpacity:   onMouseOutOpacity,
     mouseOverOpacity:  1.0,
@@ -52,11 +53,11 @@ $(document).ready(function() {
     exemptionSelector: '.selected'
   });
 
-  $('#thumbs').galleriffic({
+  $thumbs.galleriffic({
     delay: 2500,
     numThumbs: 29,
+    preloadAhead: 20,
     imageContainerSel: '#slideshow',
-    loadingContainerSel: '#loading',
     defaultTransitionDuration: 1400,
     renderSSControls: false,
     renderNavControls: false,

@@ -14,7 +14,8 @@
   font-family: 'museo_sans_500regular', Helvetica, sans-serif !important;
 }
 
-body {
+body.fixed-nav {
+  padding-top: 60px;
 }
 
 ul.wider {
@@ -51,8 +52,8 @@ ul.thumbs li {
 }
 
 ul.thumbs li img {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 #slideshow img {
@@ -88,10 +89,16 @@ ul.thumbs li img {
 }
 
 div.resume-body {
-  padding-top: 60px;
+  line-height: 1em;
+  padding-top: 38px;
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
+}
+
+div.resume-body h1 {
+  position: relative;
+  top: -20px;
 }
 
 div.resume-body h3 {
@@ -104,4 +111,29 @@ div.resume-body h3 {
 .navbar {
   /*transition: all 1s;*/
   z-index: 1000;
+}
+
+@media all and (max-width: 990px) {
+  ul.thumbs li img {
+    height: 62px;
+    width: 62px;
+  }
+
+  #resume p {
+    font-size: 11px;
+  }
+
+  div.resume-body {
+    column-count: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+  }
+
+  div.resume-body h3 {
+    font-size: 1.2em;
+  }
+
+  div.resume-body h1 {
+    font-size: 1.4em;
+  }
 }
