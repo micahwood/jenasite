@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var $resume = $('#resume'),
       $navbar = $('.navbar'),
-      $images = $('#images'),
+      $gallery = $('#gallery'),
       resumeDisplayed = false;
 
   $('.nav').on('click', 'li', function(event) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
       $resume.animate({top: '0px'}, 800);
       $navbar.animate({top: height}, 800);
       resumeDisplayed = !resumeDisplayed;
-      setTimeout(function() { $images.hide();}, 800);
+      setTimeout(function() { $gallery.hide();}, 800);
     }
   };
 
@@ -40,11 +40,11 @@ $(document).ready(function() {
       $navbar.animate({top: '0px'}, 600);
       resumeDisplayed = !resumeDisplayed;
       setTimeout(function() { $resume.hide();}, 800);
-      $images.show();
+      $gallery.show();
     }
   };
 
-  var onMouseOutOpacity = 0.67;
+  var onMouseOutOpacity = 0.47;
   $('#thumbs ul.thumbs li').opacityrollover({
     mouseOutOpacity:   onMouseOutOpacity,
     mouseOverOpacity:  1.0,

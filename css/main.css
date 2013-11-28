@@ -40,15 +40,14 @@ img {
   width: 100%;
 }
 
-#images {
-	width: 90%;
+#gallery {
 	margin-left: 25px;
 }
 
 ul.thumbs li {
   list-style: none;
   float: left;
-  padding: 3px;
+  padding: 2px;
 }
 
 ul.thumbs li img {
@@ -72,7 +71,9 @@ ul.thumbs li img {
   text-decoration: none;
 }
 
-#grid {
+#large-image {
+  /*float: right;
+  width: 55%;*/
 }
 
 #resume {
@@ -90,6 +91,10 @@ div.resume-body {
   column-count: 2;
   -webkit-column-count: 2;
   -moz-column-count: 2;
+}
+
+div.resume-body h3 {
+  border-bottom: 1px solid #000;
 }
 
 #resume p {
