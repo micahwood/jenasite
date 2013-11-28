@@ -58,6 +58,7 @@ ul.thumbs li img {
 #slideshow img {
   max-height: 89%;
   position: fixed;
+  width: inherit;
 }
 
 #slideshow span.image-wrapper {
