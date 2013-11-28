@@ -51,8 +51,14 @@ ul.thumbs li {
   padding: 3px;
 }
 
+ul.thumbs li img {
+  height: 100px;
+  width: 100px;
+}
+
 #slideshow img {
   max-height: 89%;
+  position: fixed;
 }
 
 #slideshow span.image-wrapper {
