@@ -14,10 +14,6 @@
   font-family: 'museo_sans_500regular', Helvetica, sans-serif !important;
 }
 
-body.fixed-nav {
-  padding-top: 60px;
-}
-
 ul.wider {
   /*width: 80%;*/
   text-align: center;
@@ -135,5 +131,13 @@ div.resume-body h3 {
 
   div.resume-body h1 {
     font-size: 1.4em;
+  }
+}
+@media all and (max-width: 680px) {
+  #thumbs {
+    display: none !important;
+  }
+  #large-image {
+    margin: 0 auto;
   }
 }
