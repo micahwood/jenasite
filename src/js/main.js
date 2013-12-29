@@ -5,6 +5,7 @@ $(document).ready(function() {
       $gallery = $('#gallery'),
       $thumbs = $('#thumbs'),
       $lightbox = $('.lightbox'),
+      $resumeImage = $('#resume-image'),
       resumeDisplayed = false,
       onMouseOutOpacity = 0.47;
 
@@ -28,18 +29,26 @@ $(document).ready(function() {
 
   var showResume = function showResume() {
     if (!resumeDisplayed) {
-      var height = window.innerHeight * 0.8;
+      var height = window.innerHeight * 0.91;
       $resume.show();
       $resume.animate({top: '0px'}, 800);
       $navbar.animate({top: height}, 800);
       resumeDisplayed = !resumeDisplayed;
-      setTimeout(function() { $gallery.hide();}, 800);
+      
+      setTimeout(
+        function() {
+          $gallery.hide();
+          $navbar.addClass('navbar-fixed-bottom');
+          $resumeImage.addClass('fixed');
+        }, 800);
     }
   };
 
   var hideResume = function hideResume() {
     if (resumeDisplayed) {
-      $resume.animate({top: '-100%'}, 600);
+      $navbar.removeClass('navbar-fixed-bottom');
+      $resumeImage.removeClass('fixed');
+      $resume.animate({top: '-200%'}, 600);
       $navbar.animate({top: '0px'}, 600);
       resumeDisplayed = !resumeDisplayed;
       setTimeout(function() { $resume.hide();}, 800);
