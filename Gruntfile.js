@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 			core: {
 				src: [
           'src/js/bootstrap.js',
-          'src/js/jquery.galleriffic.js',
+          // 'src/js/jquery.galleriffic.js',
+          'src/js/venobox.min.js',
           'src/js/jquery.opacityrollover.js',
           'src/js/main.js'
         ],
@@ -21,6 +22,7 @@ module.exports = function(grunt) {
       core: {
         src: [
           'src/css/bootstrap.css',
+          'src/css/venobox.css',
           'src/css/main.css'
         ],
         dest: 'css/core.css'

@@ -39,6 +39,7 @@ img {
 
 #gallery {
 	margin-left: 25px;
+  margin-right: 25px;
 }
 
 ul.thumbs li {
@@ -48,8 +49,8 @@ ul.thumbs li {
 }
 
 ul.thumbs li img {
-  height: 80px;
-  width: 80px;
+  height: 105px;
+  width: 105px;
 }
 
 #slideshow img {
@@ -80,7 +81,7 @@ ul.thumbs li img {
   top: -100%;
   height: 100%;
   width: 100%;
-  background-color: #bbb;
+  background-color: #fff;
   display: none;
 }
 
@@ -98,7 +99,7 @@ div.resume-body h1 {
 }
 
 div.resume-body h3 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #f00;
 }
 
 #resume p {
@@ -107,6 +108,22 @@ div.resume-body h3 {
 .navbar {
   /*transition: all 1s;*/
   z-index: 1000;
+  border-radius: 1px;
+  background-color: #2e6654;
+  border-color: #2f6856;
+
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+
+  .navbar-nav > li.active > a,
+  .navbar-nav > li > a:hover {
+    background-color: #225c48;
+  }
+
+  .navbar-brand {
+    color: #fff;
+  }
 }
 
 @media all and (max-width: 990px) {
@@ -120,9 +137,9 @@ div.resume-body h3 {
   }
 
   div.resume-body {
-    column-count: 3;
+    /*column-count: 3;
     -webkit-column-count: 3;
-    -moz-column-count: 3;
+    -moz-column-count: 3;*/
   }
 
   div.resume-body h3 {
@@ -135,7 +152,7 @@ div.resume-body h3 {
 }
 @media all and (max-width: 680px) {
   #thumbs {
-    display: none !important;
+    /*display: none !important;*/
   }
   #large-image {
     margin: 0 auto;

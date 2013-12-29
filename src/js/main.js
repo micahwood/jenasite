@@ -4,6 +4,7 @@ $(document).ready(function() {
       $navbar = $('.navbar'),
       $gallery = $('#gallery'),
       $thumbs = $('#thumbs'),
+      $lightbox = $('.lightbox'),
       resumeDisplayed = false,
       onMouseOutOpacity = 0.47;
 
@@ -53,27 +54,6 @@ $(document).ready(function() {
     exemptionSelector: '.selected'
   });
 
-  $thumbs.galleriffic({
-    delay: 2500,
-    numThumbs: 29,
-    preloadAhead: 20,
-    imageContainerSel: '#slideshow',
-    defaultTransitionDuration: 1400,
-    renderSSControls: false,
-    renderNavControls: false,
-    enableBottomPager: false,
-    syncTransitions: true,
-    onSlideChange: function(prevIndex, nextIndex) {
-      this.find('ul.thumbs').children()
-        .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
-        .eq(nextIndex).fadeTo('fast', 1.0);
-    },
-    onPageTransitionOut: function(callback) {
-      this.fadeTo('fast', 0.0, callback);
-    },
-    onPageTransitionIn: function() {
-      this.fadeTo('fast', 1.0);
-    }
-  });
+  $lightbox.venobox();
 
 });
