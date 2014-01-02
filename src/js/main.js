@@ -6,8 +6,19 @@ $(document).ready(function() {
       $thumbs = $('#thumbs'),
       $lightbox = $('.lightbox'),
       $resumeImage = $('#resume-image'),
+      wall = new freewall($thumbs),
       resumeDisplayed = false,
       onMouseOutOpacity = 0.47;
+
+  $lightbox.venobox();
+  wall.reset({
+    // cellW: 200,
+    // cellH: 100,
+    gutterX: 5,
+    gutterY: 5,
+    onResize: function() { wall.fitWidth(); }
+  });
+  wall.fitWidth();
 
   $('.nav').on('click', 'li', function(event) {
     var target = event.target.text;
@@ -56,13 +67,11 @@ $(document).ready(function() {
     }
   };
 
-  $('#thumbs ul.thumbs li').opacityrollover({
-    mouseOutOpacity:   onMouseOutOpacity,
-    mouseOverOpacity:  1.0,
+  $('#thumbs a').opacityrollover({
+    mouseOutOpacity:   1.0,
+    mouseOverOpacity:  0.47,
     fadeSpeed:         'fast',
     exemptionSelector: '.selected'
   });
-
-  $lightbox.venobox();
 
 });
