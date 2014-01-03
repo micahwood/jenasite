@@ -11,13 +11,6 @@ $(document).ready(function() {
       onMouseOutOpacity = 0.47;
 
   $lightbox.venobox();
-  wall.reset({
-    // cellW: 20,
-    // cellH: 100,
-    gutterX: 4,
-    gutterY: 4,
-    onResize: function() { wall.fitWidth(); }
-  }).fitZone();
 
   if (window.innerWidth <= 765) {
     $('.nav').removeClass('wider');
@@ -75,6 +68,17 @@ $(document).ready(function() {
     mouseOverOpacity:  0.47,
     fadeSpeed:         'fast',
     exemptionSelector: '.selected'
+  });
+
+  // images need to load before they can be manipulated
+  $(window).load(function() {
+    wall.reset({
+      cellW: 20,
+      cellH: 100,
+      gutterX: 4,
+      gutterY: 4,
+      onResize: function() { wall.fitWidth(); }
+    }).fitWidth();
   });
 
 });
