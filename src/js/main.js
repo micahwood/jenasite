@@ -12,13 +12,20 @@ $(document).ready(function() {
 
   $lightbox.venobox();
   wall.reset({
-    cellW: 20,
-    cellH: 100,
+    // cellW: 20,
+    // cellH: 100,
     gutterX: 4,
     gutterY: 4,
     onResize: function() { wall.fitWidth(); }
-  });
-  wall.fitWidth();
+  }).fitZone();
+
+  if (window.innerWidth <= 765) {
+    $('.nav').removeClass('wider');
+  }
+
+  $('.name').on('click', function() {
+    $('.nav li').children().first().click();
+  })
 
   $('.nav').on('click', 'li', function(event) {
     var target = event.target.text;
@@ -33,10 +40,6 @@ $(document).ready(function() {
         hideResume();
     }
   });
-
-  if (window.innerWidth <= 765) {
-    $('.nav').removeClass('wider');
-  }
 
   var showResume = function showResume() {
     if (!resumeDisplayed) {
