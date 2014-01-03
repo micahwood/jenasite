@@ -73,12 +73,12 @@ $(document).ready(function() {
   // images need to load before they can be manipulated
   $(window).load(function() {
     wall.reset({
-      cellW: 20,
-      cellH: 100,
-      gutterX: 4,
-      gutterY: 4,
-      onResize: function() { wall.fitWidth(); }
-    }).fitWidth();
+      cellW: 170,
+      cellH: 'auto',
+      gutterX: 8,
+      gutterY: 8,
+      onResize: function() { wall.fitZone(); }
+    }).fitZone();
   });
 
 });
