@@ -12,10 +12,10 @@ $(document).ready(function() {
 
   $lightbox.venobox();
   wall.reset({
-    // cellW: 200,
-    // cellH: 100,
-    gutterX: 5,
-    gutterY: 5,
+    cellW: 20,
+    cellH: 100,
+    gutterX: 4,
+    gutterY: 4,
     onResize: function() { wall.fitWidth(); }
   });
   wall.fitWidth();
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   var showResume = function showResume() {
     if (!resumeDisplayed) {
-      var height = window.innerHeight * 0.91;
+      var height = window.innerHeight - $('nav').height();
       $resume.show();
       $resume.animate({top: '0px'}, 800);
       $navbar.animate({top: height}, 800);
@@ -59,7 +59,7 @@ $(document).ready(function() {
     if (resumeDisplayed) {
       $navbar.removeClass('navbar-fixed-bottom');
       $resumeImage.removeClass('fixed');
-      $resume.animate({top: '-200%'}, 600);
+      $resume.animate({top: '-100%'}, 600);
       $navbar.animate({top: '0px'}, 600);
       resumeDisplayed = !resumeDisplayed;
       setTimeout(function() { $resume.hide();}, 800);
