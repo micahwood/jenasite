@@ -100,7 +100,7 @@ div.resume-body h3 {
   .navbar-nav > li.active > a,
   .navbar-nav > li.active > a:hover,
   .navbar-nav > li > a:hover {
-    background-color: #224c3f;
+    background-color: #224c3f !important;
   }
 
   .navbar-brand {
