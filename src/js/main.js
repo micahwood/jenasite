@@ -77,8 +77,8 @@ $(document).ready(function() {
       cellH: 'auto',
       gutterX: 8,
       gutterY: 8,
-      onResize: function() { wall.fitZone(); }
-    }).fitZone();
+      onResize: function() { wall.fitWidth(); }
+    }).fitWidth();
   });
 
 });
