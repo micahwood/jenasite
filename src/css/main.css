@@ -14,6 +14,10 @@
   font-family: 'museo_sans_500regular', Helvetica, sans-serif !important;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 ul.wider {
   /*width: 80%;*/
   text-align: center;
