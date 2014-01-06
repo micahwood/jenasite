@@ -32,10 +32,6 @@ a.name {
   /*padding-right: 25px;*/
 }
 
-img {
-  /*vertical-align: baseline;*/
-}
-
 .full-width {
   padding: 0 15px;
   width: 100%;
@@ -54,15 +50,22 @@ img {
   display: none;
 }
 
+#bio {
+  padding: 0 15px;
+  position: absolute;
+  top: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+}
+
 div.resume-body {
   line-height: 1em;
   padding-top: 38px;
   padding-bottom: 65px;
   width: 55%;
   float: left;
-  /*column-count: 2;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;*/
 }
 
 div.resume-body h1 {
@@ -82,8 +85,6 @@ div.resume-body h3 {
   position: relative;
   right: 0;
   padding-top: 38px;
-  img {
-  }
 }
 
 .fixed {
@@ -123,9 +124,6 @@ div.resume-body h3 {
   }
 
   div.resume-body {
-    /*column-count: 3;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;*/
   }
 
   div.resume-body h3 {
