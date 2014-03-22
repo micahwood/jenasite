@@ -3,12 +3,13 @@ $(document).ready(function() {
   var $resume = $('#resume'),
       $navbar = $('.navbar'),
       $gallery = $('#gallery'),
+      $bio = $('#bio'),
       $thumbs = $('#thumbs'),
       $lightbox = $('.lightbox'),
       $resumeImage = $('#resume-image'),
       wall = new freewall($thumbs),
-      resumeDisplayed = false,
-      onMouseOutOpacity = 0.47;
+      onMouseOutOpacity = 0.47,
+      zindex = 100;
 
   $lightbox.venobox();
 
@@ -29,13 +30,17 @@ $(document).ready(function() {
       case 'Resume':
         showResume();
         break;
+      case 'Artist':
+        showBio();
+        break;
       default:
         hideResume();
     }
   });
 
   var showResume = function showResume() {
-    if (!resumeDisplayed) {
+    zindex++;
+    $resume.css({'z-index': zindex});
       var height = window.innerHeight - $('nav').height();
       $resume.show();
       $resume.animate({top: '0px'}, 800);
@@ -48,19 +53,26 @@ $(document).ready(function() {
           $navbar.addClass('navbar-fixed-bottom');
           $resumeImage.addClass('fixed');
         }, 800);
-    }
   };
 
   var hideResume = function hideResume() {
-    if (resumeDisplayed) {
       $navbar.removeClass('navbar-fixed-bottom');
       $resumeImage.removeClass('fixed');
       $resume.animate({top: '-100%'}, 600);
+      $bio.animate({top: '-100%'}, 600);
       $navbar.animate({top: '0px'}, 600);
       resumeDisplayed = !resumeDisplayed;
       setTimeout(function() { $resume.hide();}, 800);
       $gallery.show();
-    }
+  };
+
+  var showBio = function showBio() {
+    var height = window.innerHeight - $('nav').height();
+    zindex++;
+    $bio.show();
+    $bio.css({'z-index': zindex});
+    $bio.animate({top: '0px'}, 800);
+    $navbar.animate({top: height}, 800);
   };
 
   $('#thumbs a').opacityrollover({
