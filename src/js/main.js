@@ -6,9 +6,13 @@ $(document).ready(function() {
       $bio = $('#bio'),
       $thumbs = $('#thumbs'),
       $lightbox = $('.lightbox'),
-      $homeImage = $('#home-image');
+      $homeImage = $('#home-image'),
+      fadeSpeed = 900;
 
   $lightbox.venobox();
+
+  if ($(window).innerWidth() < 765)
+    $('.navbar-stack').removeClass('fixed');
 
   $('.nav').on('click', 'li', function(event) {
     var target = event.target.text.toLowerCase();
@@ -18,13 +22,13 @@ $(document).ready(function() {
     $('.displayed').fadeOut().removeClass('displayed');
     switch (target) {
       case 'cv':
-        $resume.fadeIn('slow').addClass('displayed');
+        $resume.fadeIn(fadeSpeed).addClass('displayed');
         break;
       case 'about':
-        $bio.fadeIn('slow').addClass('displayed');
+        $bio.fadeIn(fadeSpeed).addClass('displayed');
         break;
       case 'work':
-        $thumbs.fadeIn('slow').addClass('displayed');
+        $thumbs.fadeIn(fadeSpeed).addClass('displayed');
         break;
       default:
         hideResume();
@@ -38,21 +42,6 @@ $(document).ready(function() {
     }, mouseleave: function() {
       $('#thumbs a').removeClass('fade');
     }
-  });
-
-  var buildGallery = function() {
-    wall.reset({
-      cellW: 170,
-      cellH: 'auto',
-      gutterX: 8,
-      gutterY: 8,
-      onResize: function() { wall.fitWidth(); }
-    }).fitWidth();
-  }
-
-  // images need to load before they can be manipulated
-  $(window).load(function() {
-    // buildGallery();
   });
 
 });

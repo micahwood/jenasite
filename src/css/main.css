@@ -1,5 +1,5 @@
 * {
-  font-family: 'Source Sans Pro', 'Raleway', Helvetica, sans-serif !important;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif !important;
 }
 
 html {
@@ -11,14 +11,23 @@ body {
   background-position-y: -30px;
   background-attachment: fixed;
   font-size: 18px;
+  padding-top: 120px;
 }
 
 .fade {
   opacity: 0.67;
 }
 
+#foreground {
+  position: fixed;
+  background-color: #fff;
+  height: 80px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
 #thumbs {
-  display: none;
 
   a {
     transition: opacity 1s;
@@ -34,7 +43,6 @@ body {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  display: none;
 }
 
 #bio {
@@ -42,7 +50,6 @@ body {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  display: none;
 }
 
 div.resume-body {
@@ -70,10 +77,6 @@ div.resume-body {
 #home-image {
   margin: 0 auto;
   max-width: 670px;
-}
-
-.wrapper {
-  padding: 110px 0;
 }
 
 .fixed {
@@ -135,7 +138,7 @@ div.resume-body {
     width: 62px;
   }
 
-  #resume p {
+/*  #resume p {
     font-size: 11px;
   }
 
@@ -148,7 +151,7 @@ div.resume-body {
 
   div.resume-body h1 {
     font-size: 1.4em;
-  }
+  }*/
 }
 @media all and (max-width: 680px) {
   #thumbs {
