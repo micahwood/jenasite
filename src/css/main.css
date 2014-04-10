@@ -9,26 +9,20 @@ html {
 body {
   background: url('../images/backstripe.png') no-repeat;
   background-position-y: -30px;
+  background-attachment: fixed;
   font-size: 18px;
 }
 
-ul.wider {
-  /*width: 80%;*/
-  text-align: center;
+.fade {
+  opacity: 0.67;
 }
 
-ul.wider > li {
-  width: 33%;
-}
+#thumbs {
+  display: none;
 
-a.name {
-  font-size: 24px;
-  /*padding-right: 25px;*/
-}
-
-.full-width {
-  padding: 0 15px;
-  width: 100%;
+  a {
+    transition: opacity 1s;
+  }
 }
 
 #gallery {
@@ -37,8 +31,6 @@ a.name {
 
 #resume {
   padding: 0 15px;
-  position: absolute;
-  top: -100%;
   height: 100%;
   width: 100%;
   background-color: #fff;
@@ -47,8 +39,6 @@ a.name {
 
 #bio {
   padding: 0 15px;
-  position: absolute;
-  top: -100%;
   height: 100%;
   width: 100%;
   background-color: #fff;
@@ -57,10 +47,7 @@ a.name {
 
 div.resume-body {
   line-height: 1em;
-  padding-top: 38px;
   padding-bottom: 65px;
-  width: 55%;
-  float: left;
 }
 
 div.resume-body h1 {
@@ -75,13 +62,13 @@ div.resume-body h3 {
 #resume p {
 }
 
-#resume-image {
+#home-image {
   margin: 0 auto;
   max-width: 670px;
 }
 
 .wrapper {
-  padding: 20px 0;
+  padding: 110px 0;
 }
 
 .fixed {

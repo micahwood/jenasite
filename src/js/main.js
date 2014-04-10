@@ -13,25 +13,22 @@ $(document).ready(function() {
 
   $lightbox.venobox();
 
-  if (window.innerWidth <= 765) {
-    $('.nav').removeClass('wider');
-  }
-
-  $('.name').on('click', function() {
-    $('.nav li').children().first().click();
-  })
-
   $('.nav').on('click', 'li', function(event) {
-    var target = event.target.text;
+    var target = event.target.text.toLowerCase();
 
     $('.active').removeClass('active');
     $(this).addClass('active');
     switch (target) {
-      case 'Resume':
-        showResume();
+      case 'cv':
+        $('#home-image').fadeOut();
+        $('#resume').fadeIn('slow');
         break;
-      case 'Artist':
-        showBio();
+      case 'about':
+        break;
+      case 'work':
+        $('#home-image').fadeOut();
+        $('#thumbs').fadeIn('slow');
+        buildGallery();
         break;
       default:
         hideResume();
@@ -75,15 +72,16 @@ $(document).ready(function() {
     $navbar.animate({top: height}, 800);
   };
 
-  $('#thumbs a').opacityrollover({
-    mouseOutOpacity:   1.0,
-    mouseOverOpacity:  0.47,
-    fadeSpeed:         'fast',
-    exemptionSelector: '.selected'
+  $('#thumbs a').on({
+    mouseenter: function() {
+      $('#thumbs a').addClass('fade');
+      $(this).removeClass('fade');
+    }, mouseleave: function() {
+      $('#thumbs a').removeClass('fade');
+    }
   });
 
-  // images need to load before they can be manipulated
-  $(window).load(function() {
+  var buildGallery = function() {
     wall.reset({
       cellW: 170,
       cellH: 'auto',
@@ -91,6 +89,11 @@ $(document).ready(function() {
       gutterY: 8,
       onResize: function() { wall.fitWidth(); }
     }).fitWidth();
+  }
+
+  // images need to load before they can be manipulated
+  $(window).load(function() {
+    // buildGallery();
   });
 
 });
