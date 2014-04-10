@@ -141,10 +141,10 @@ div.resume-body {
 }
 
 @media all and (max-width: 990px) {
-  ul.thumbs li img {
+  /*.thumbs img {
     height: 62px;
     width: 62px;
-  }
+  }*/
 
 /*  #resume p {
     font-size: 11px;
