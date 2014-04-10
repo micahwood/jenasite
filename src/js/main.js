@@ -6,10 +6,7 @@ $(document).ready(function() {
       $bio = $('#bio'),
       $thumbs = $('#thumbs'),
       $lightbox = $('.lightbox'),
-      $resumeImage = $('#resume-image'),
-      wall = new freewall($thumbs),
-      onMouseOutOpacity = 0.47,
-      zindex = 100;
+      $homeImage = $('#home-image');
 
   $lightbox.venobox();
 
@@ -20,57 +17,21 @@ $(document).ready(function() {
     $(this).addClass('active');
     switch (target) {
       case 'cv':
-        $('#home-image').fadeOut();
-        $('#resume').fadeIn('slow');
+        $homeImage.fadeOut();
+        $resume.fadeIn('slow');
         break;
       case 'about':
+        $homeImage.fadeOut();
+        $bio.fadeIn('slow');
         break;
       case 'work':
-        $('#home-image').fadeOut();
-        $('#thumbs').fadeIn('slow');
-        buildGallery();
+        $homeImage.fadeOut();
+        $thumbs.fadeIn('slow');
         break;
       default:
         hideResume();
     }
   });
-
-  var showResume = function showResume() {
-    zindex++;
-    $resume.css({'z-index': zindex});
-      var height = window.innerHeight - $('nav').height();
-      $resume.show();
-      $resume.animate({top: '0px'}, 800);
-      $navbar.animate({top: height}, 800);
-      resumeDisplayed = !resumeDisplayed;
-      
-      setTimeout(
-        function() {
-          $gallery.hide();
-          $navbar.addClass('navbar-fixed-bottom');
-          $resumeImage.addClass('fixed');
-        }, 800);
-  };
-
-  var hideResume = function hideResume() {
-      $navbar.removeClass('navbar-fixed-bottom');
-      $resumeImage.removeClass('fixed');
-      $resume.animate({top: '-100%'}, 600);
-      $bio.animate({top: '-100%'}, 600);
-      $navbar.animate({top: '0px'}, 600);
-      resumeDisplayed = !resumeDisplayed;
-      setTimeout(function() { $resume.hide();}, 800);
-      $gallery.show();
-  };
-
-  var showBio = function showBio() {
-    var height = window.innerHeight - $('nav').height();
-    zindex++;
-    $bio.show();
-    $bio.css({'z-index': zindex});
-    $bio.animate({top: '0px'}, 800);
-    $navbar.animate({top: height}, 800);
-  };
 
   $('#thumbs a').on({
     mouseenter: function() {

@@ -8,7 +8,6 @@ module.exports = function(grunt) {
 				src: [
           'src/js/bootstrap.js',
           'src/js/venobox.min.js',
-          'src/js/freewall.js',
           'src/js/main.js'
         ],
         dest: 'js/core.js'
