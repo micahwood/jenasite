@@ -58,6 +58,9 @@ div.resume-body {
   h3 {
     padding-bottom: 20px
   }
+  h3:first-child {
+    margin-top: 0px;
+  }
 
   p {
     line-height: 0.8;

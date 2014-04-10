@@ -15,18 +15,16 @@ $(document).ready(function() {
 
     $('.active').removeClass('active');
     $(this).addClass('active');
+    $('.displayed').fadeOut().removeClass('displayed');
     switch (target) {
       case 'cv':
-        $homeImage.fadeOut();
-        $resume.fadeIn('slow');
+        $resume.fadeIn('slow').addClass('displayed');
         break;
       case 'about':
-        $homeImage.fadeOut();
-        $bio.fadeIn('slow');
+        $bio.fadeIn('slow').addClass('displayed');
         break;
       case 'work':
-        $homeImage.fadeOut();
-        $thumbs.fadeIn('slow');
+        $thumbs.fadeIn('slow').addClass('displayed');
         break;
       default:
         hideResume();
