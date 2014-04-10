@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link href="css/core.css" rel="stylesheet">
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -9,29 +10,31 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar">
-		<div class="container">
-			<div class="navbar-header col-lg-3 col-md-3 col-sm-4">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#" class="navbar-brand name">Jena Schmidt</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav wider col-lg-9 col-md-9 col-sm-8">
-					<li class="active"><a href="#">Gallery</a></li>
-					<li><a href="#">Artist</a></li><!-- contact/bio -->
-					<li><a href="#" id="resume-nav">Resume</a></li>
-				</ul>
-			</div>
+	<div class="navbar">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand name">JENA SCHMIDT</a>
 		</div>
+	</div>
+
+	<nav class="navbar-collapse collapse col-lg-4 col-md-4 col-sm-4">
+		<ul class="nav navbar-stack">
+			<li class="active"><a href="#">WORK</a></li>
+			<li><a href="#">ABOUT</a></li><!-- contact/bio -->
+			<li><a href="#" id="resume-nav">CV</a></li>
+		</ul>
 	</nav>
 	
-	<section id="gallery" class="container">
-		<div id="thumbs">
+	<section id="gallery" class="container col-lg-6 col-md-6 col-sm-12 col-xs-12">
+		<div id="resume-image">
+			<img class="img-responsive" src="images/DSC_1077.jpg" />
+		</div>
+		<div id="thumbs" style="display:none">
 			<a class="lightbox" data-gall="jenaGallery" href="images/DSC_1059.jpg">
 				<img src="images/thumbs/DSC_1059.jpg" />
 			</a>
@@ -154,9 +157,7 @@
 				<p>Slug Magazine, Porchfest 2013</p>
 				<p>Insight Magazine, 2012</p>
 		</div>
-		<div id="resume-image" class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-			<img class="img-responsive" src="images/DSC_1077.jpg" />
-		</div>
+		
 	</section>
 	<section id="bio">
 		<p><strong>Jena Schmidt</strong> was born in 1988 in Salt Lake City, Utah. She grew up with a love for art of all genres. She began serious study of fine arts at Utah Valley University in 2006 and graduated from Brigham Young University in 2011 with a Bachelor of Fine Arts in painting. She is currently living and working in Salt Lake City.</p>
