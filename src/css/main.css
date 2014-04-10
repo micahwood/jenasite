@@ -1,5 +1,5 @@
 * {
-  font-family: 'Raleway', Helvetica, sans-serif !important;
+  font-family: 'Source Sans Pro', 'Raleway', Helvetica, sans-serif !important;
 }
 
 html {
@@ -9,6 +9,7 @@ html {
 body {
   background: url('../images/backstripe.png') no-repeat;
   background-position-y: -30px;
+  font-size: 18px;
 }
 
 ul.wider {
@@ -31,6 +32,7 @@ a.name {
 }
 
 #gallery {
+  padding-bottom: 30px;
 }
 
 #resume {
@@ -74,10 +76,12 @@ div.resume-body h3 {
 }
 
 #resume-image {
-  float: right;
-  position: relative;
-  right: 0;
-  padding-top: 38px;
+  margin: 0 auto;
+  max-width: 670px;
+}
+
+.wrapper {
+  padding: 20px 0;
 }
 
 .fixed {
@@ -89,6 +93,7 @@ div.resume-body h3 {
   border-radius: 1px;
   background-color: transparent;
   border-bottom: 3px solid #f00;
+  text-transform: uppercase;
 
   .navbar-brand {
     color: #000;
@@ -108,15 +113,29 @@ div.resume-body h3 {
   }
 }
 
-  .navbar-stack > li > a {
-    color: #000;
-  }
+.navbar-stack > li > a {
+  color: #000;
+  text-transform: uppercase;
+  padding: 0;
+  letter-spacing: 2px;
+}
 
-  .navbar-stack > li.active > a,
-  .navbar-stack > li.active > a:hover,
-  .navbar-stack > li > a:hover {
-    /*background-color: #224c3f !important;*/
-  }
+.navbar-collapse {
+  padding-left: 20px;
+}
+
+.navbar-stack > li.active > a,
+.navbar-stack > li.active > a:hover,
+.navbar-stack > li > a:hover {
+  background-color: transparent;
+}
+
+.navbar-stack > li.active > a:after,
+.navbar-stack > li.active > a:hover:after,
+.navbar-stack > li > a:hover:after {
+  content: ' >';
+  color: #f00;
+}
 
 @media all and (max-width: 990px) {
   ul.thumbs li img {
