@@ -15,7 +15,7 @@ body {
 }
 
 .fade {
-  opacity: 0.67;
+  opacity: 0.57;
 }
 
 #foreground {
@@ -31,6 +31,14 @@ body {
 
   a {
     transition: opacity 1s;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    padding: 20px;
   }
 }
 
