@@ -102,6 +102,7 @@ div.resume-body {
     color: #000;
     letter-spacing: 8px;
     padding: 30px;
+    padding-right: 0;
     position: relative;
     top: 18px;
     font-size: 34px;
@@ -141,10 +142,9 @@ div.resume-body {
 }
 
 @media all and (max-width: 990px) {
-  /*.thumbs img {
-    height: 62px;
-    width: 62px;
-  }*/
+  #thumbs img {
+    padding: 15px;
+  }
 
 /*  #resume p {
     font-size: 11px;
@@ -161,11 +161,15 @@ div.resume-body {
     font-size: 1.4em;
   }*/
 }
-@media all and (max-width: 680px) {
-  #thumbs {
-    /*display: none !important;*/
+
+@media all and (max-width: 400px) {
+  .navbar .navbar-brand {
+    font-size: 28px;
   }
-  #large-image {
-    margin: 0 auto;
+}
+@media all and (max-width: 680px) {
+  #thumbs img {
+    padding: 3px;
+    text-align: center;
   }
 }
