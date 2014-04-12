@@ -11,9 +11,6 @@ $(document).ready(function() {
 
   $lightbox.venobox();
 
-  if ($(window).innerWidth() < 765)
-    $('.navbar-stack').removeClass('fixed');
-
   $('.nav').on('click', 'li', function(event) {
     var target = event.target.text.toLowerCase();
 

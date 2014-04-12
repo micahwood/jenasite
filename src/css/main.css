@@ -145,34 +145,31 @@ div.resume-body {
   #thumbs img {
     padding: 15px;
   }
+}
 
-/*  #resume p {
-    font-size: 11px;
+@media all and (max-width: 760px) {
+  #thumbs img {
+    padding: 3px;
   }
-
-  div.resume-body {
+  #thumbs {
+    text-align: center;
   }
-
-  div.resume-body h3 {
-    font-size: 1.2em;
+  #foreground {
+    width: 97%;
   }
+  .navbar-stack {
+    position: initial !important;
+  }
+}
 
-  div.resume-body h1 {
-    font-size: 1.4em;
-  }*/
+@media all and (max-width: 460px) {
+  #thumbs img {
+    width: 70%;
+  }
 }
 
 @media all and (max-width: 400px) {
   .navbar .navbar-brand {
     font-size: 28px;
-  }
-}
-@media all and (max-width: 680px) {
-  #thumbs img {
-    padding: 3px;
-    text-align: center;
-  }
-  #foreground {
-    width: 97%;
   }
 }
