@@ -172,4 +172,7 @@ div.resume-body {
     padding: 3px;
     text-align: center;
   }
+  #foreground {
+    width: 97%;
+  }
 }
