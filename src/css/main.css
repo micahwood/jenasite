@@ -173,3 +173,9 @@ div.resume-body {
     font-size: 28px;
   }
 }
+
+@media all and (max-width: 320px) {
+  .navbar .navbar-brand {
+    font-size: 18px;
+  }
+}
