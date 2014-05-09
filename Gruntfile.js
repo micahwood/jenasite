@@ -30,6 +30,12 @@ module.exports = function(grunt) {
       all: 'src/js/*.js'
     },
     watch: {
+      options: {
+        livereload: true
+      },
+      html: {
+        files: ['index.html']
+      },
       css: {
         files: [
         'src/css/*.css'
@@ -55,7 +61,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('dev', function () {
+  grunt.registerTask('default', function () {
     grunt.task.run([
       'less',
       'uglify:core',
