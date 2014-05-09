@@ -1,4 +1,9 @@
 {
+  "name": "Jena Site",
+  "description": "A gallery website for Jena Schmidt",
+  "version": "1.0.0",
+  "homepage": "http://jenaschmidt.com",
+  "private": true,
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-jshint": "~0.6.4",
