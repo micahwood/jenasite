@@ -3,9 +3,10 @@
 angular
   .module('jenasiteApp', [
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ngAnimate'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -32,4 +33,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]).run(['$rootScope', '$location', function($rootScope, $location){
+    var path = function() { return $location.path();};
+    $rootScope.$watch(path, function(newVal, oldVal){
+      $rootScope.activetab = newVal;
+    });
+  }]);

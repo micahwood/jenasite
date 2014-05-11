@@ -1,5 +1,5 @@
 <section id="thumbs">
-  <a ng-repeat="img in images" class="lightbox" data-gall="jenaGallery" jena-venobox href="{{img.mainUrl}}">
+  <a ng-repeat="img in images" data-gall="jenaGallery" jena-venobox href="{{img.mainUrl}}" title="{{img.title}}">
     <img ng-src="{{img.thumbnail}}">
   </a>
 <!--   <a class="lightbox" data-gall="jenaGallery" href="images/DSC_1059.jpg">
