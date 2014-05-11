@@ -8,8 +8,6 @@ angular.module('jenasiteApp')
       {mainUrl: "images/DSC_1087.jpg", thumbnail: "images/thumbs/DSC_1087.jpg", title:"pretty picture"},
       {mainUrl: "images/DSC_1089.jpg", thumbnail: "images/thumbs/DSC_1089.jpg", title:"an ok picture"},
     ];
-
-    // $scope.setTransparency = function
   })
   .directive('jenaVenobox', function(){
     
@@ -17,6 +15,13 @@ angular.module('jenasiteApp')
       restrict: 'A',
       link: function($scope, iElm, iAttrs, controller) {
         $(iElm).venobox();
+
+        iElm.on('mouseenter', function(event) {
+          iElm.parent().children().addClass('fade');
+          iElm.removeClass('fade');
+        }).on('mouseleave', function(event) {
+          iElm.parent().children().removeClass('fade');
+        });
       }
     };
   });;
