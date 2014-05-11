@@ -1,0 +1,189 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+* {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif !important;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: url('../images/backstripe.png') no-repeat;
+  background-position-y: -30px;
+  background-attachment: fixed;
+  font-size: 18px;
+  padding-top: 120px;
+}
+
+.fade {
+  opacity: 0.57;
+}
+
+#foreground {
+  position: fixed;
+  background-color: #fff;
+  height: 80px;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+#thumbs {
+
+  a {
+    transition: opacity 1s;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    padding: 20px;
+  }
+}
+
+#gallery {
+  padding-bottom: 30px;
+}
+
+#resume {
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#bio {
+  padding: 0 15px;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+div.resume-body {
+  line-height: 1em;
+  padding-bottom: 65px;
+
+
+  h1 {
+    position: relative;
+    top: -20px;
+  }
+
+  h3 {
+    padding-bottom: 20px
+  }
+  h3:first-child {
+    margin-top: 0px;
+  }
+
+  p {
+    line-height: 0.8;
+  }
+}
+
+#home-image {
+  margin: 0 auto;
+  max-width: 670px;
+}
+
+.fixed {
+  position: fixed !important;
+}
+
+.navbar {
+  z-index: 1000;
+  border-radius: 1px;
+  background-color: transparent;
+  border-bottom: 3px solid #f00;
+  text-transform: uppercase;
+
+  .navbar-brand {
+    color: #000;
+    letter-spacing: 8px;
+    padding: 30px;
+    padding-right: 0;
+    position: relative;
+    top: 18px;
+    font-size: 34px;
+  }
+
+  .navbar-toggle {
+    top: 35px;
+
+    .icon-bar {
+      background-color: #000;
+    }
+  }
+}
+
+.navbar-stack > li > a {
+  color: #000;
+  text-transform: uppercase;
+  padding: 0;
+  letter-spacing: 2px;
+}
+
+.navbar-collapse {
+  padding-left: 20px;
+}
+
+.navbar-stack > li.active > a,
+.navbar-stack > li.active > a:hover,
+.navbar-stack > li > a:hover {
+  background-color: transparent;
+}
+
+.navbar-stack > li.active > a:after,
+.navbar-stack > li.active > a:hover:after,
+.navbar-stack > li > a:hover:after {
+  content: ' >';
+  color: #f00;
+}
+
+@media all and (max-width: 990px) {
+  #thumbs img {
+    padding: 15px;
+  }
+}
+
+@media all and (max-width: 760px) {
+  #thumbs img {
+    padding: 3px;
+  }
+  #thumbs {
+    text-align: center;
+  }
+  #foreground {
+    width: 97%;
+  }
+  .navbar-stack {
+    position: initial !important;
+  }
+}
+
+@media all and (max-width: 460px) {
+  #thumbs img {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .navbar .navbar-brand {
+    font-size: 28px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .navbar .navbar-brand {
+    font-size: 18px;
+  }
+}
