@@ -1,5 +1,8 @@
 <section id="thumbs">
-  <a class="lightbox" data-gall="jenaGallery" href="images/DSC_1059.jpg">
+  <a ng-repeat="img in images" class="lightbox" data-gall="jenaGallery" jena-venobox href="{{img.mainUrl}}">
+    <img ng-src="{{img.thumbnail}}">
+  </a>
+<!--   <a class="lightbox" data-gall="jenaGallery" href="images/DSC_1059.jpg">
     <img src="images/original/thumbs/DSC_1059.jpg" />
   </a>
   <a class="lightbox" data-gall="jenaGallery" href="images/DSC_1077.jpg">
@@ -86,4 +89,4 @@
   <a class="lightbox" data-gall="jenaGallery" href="images/worldupturned.img011.jpg">
     <img src="images/original/thumbs/worldupturned.img011.jpg" />
   </a>
-</section>
+ --></section>
