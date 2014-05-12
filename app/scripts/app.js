@@ -21,15 +21,6 @@ angular
       .when('/cv', {
         templateUrl: 'views/resume.html'
       })
-      .when('/work', {
-        templateUrl: 'views/gallery.html'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html'
-      })
-      .when('/cv', {
-        templateUrl: 'views/resume.html'
-      })
       .otherwise({
         redirectTo: '/'
       });
