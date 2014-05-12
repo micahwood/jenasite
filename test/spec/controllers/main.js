@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: GalleryCtrl', function () {
 
   // load the controller's module
   beforeEach(module('jenasiteApp'));
 
-  var MainCtrl,
+  var GalleryCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    GalleryCtrl = $controller('GalleryCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should attach a list of images to the scope', function () {
+    expect(scope.images.length).toBe(4);
   });
 });
