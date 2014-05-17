@@ -6,6 +6,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+@import "animation";
+
 * {
   font-family: 'Source Sans Pro', Helvetica, sans-serif !important;
 }
@@ -20,61 +22,6 @@ body {
   background-attachment: fixed;
   font-size: 18px;
   padding-top: 120px;
-}
-
-.view-container {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.view-frame.ng-enter, .view-frame.ng-leave {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.view-frame.ng-enter {
-  -webkit-animation: 0.8s fade-in;
-  -moz-animation: 0.8s fade-in;
-  -o-animation: 0.8s fade-in;
-  animation: 0.8s fade-in;
-  z-index: 100;
-}
-
-.view-frame.ng-leave {
-  -webkit-animation: 0.8s fade-out;
-  -moz-animation: 0.8s fade-out;
-  -o-animation: 0.8s fade-out;
-  animation: 0.8s fade-out;
-  z-index:99;
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-moz-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
 }
 
 .fade {
