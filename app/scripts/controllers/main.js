@@ -1,13 +1,10 @@
 'use strict';
 
 angular.module('jenasiteApp')
-  .controller('GalleryCtrl', function ($scope) {
-    $scope.images = [
-      {url: 'images/DSC_1059.jpg', thumbnail: 'images/thumbs/DSC_1059.jpg', title:'A picture'},
-      {url: 'images/DSC_1077.jpg', thumbnail: 'images/thumbs/DSC_1077.jpg', title:'another picture'},
-      {url: 'images/DSC_1087.jpg', thumbnail: 'images/thumbs/DSC_1087.jpg', title:'pretty picture'},
-      {url: 'images/DSC_1089.jpg', thumbnail: 'images/thumbs/DSC_1089.jpg', title:'an ok picture'},
-    ];
+  .controller('GalleryCtrl', function ($scope, $http) {
+    $http.get('/image').success(function(data) {
+      $scope.images = data;
+    });
   })
   .directive('jenaVenobox', function(){
     
