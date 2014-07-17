@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('jenasiteApp')
-  .controller('GalleryCtrl', function ($scope, $http) {
-    $http.get('/image').success(function(data) {
-      $scope.images = data;
-    });
+  .controller('GalleryCtrl', function ($scope, images) {
+    $scope.images = images.data;
   })
   .directive('jenaVenobox', function(){
     

@@ -6,7 +6,7 @@ angular
     'ngRoute',
     'ngAnimate'
   ])
-  .config(['$routeProvider', 'locationProvider', function ($routeProvider, $locationProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
@@ -14,7 +14,12 @@ angular
       })
       .when('/work', {
         templateUrl: 'views/gallery.html',
-        controller: 'GalleryCtrl'
+        controller: 'GalleryCtrl',
+        resolve: {
+          images: ['galleryLibrary', function(galleryLibrary) {
+            return galleryLibrary.getImages();
+          }]
+        }
       })
       .when('/about', {
         templateUrl: 'views/about.html'
