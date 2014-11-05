@@ -4,10 +4,14 @@ angular
   .module('jenasiteApp', [
     'ngResource',
     'ngRoute',
-    'ngAnimate'
+    'ngAnimate',
+    'bootstrapLightbox'
   ])
-  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider, $locationProvider, LightboxProvider) {
     $locationProvider.html5Mode(true);
+    LightboxProvider.getImageCaption = function(image) {
+      return image.title;
+    };
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,9 +34,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }]).run(['$rootScope', '$location', function($rootScope, $location){
+  }).run(function($rootScope, $location){
     var path = function() { return $location.path();};
     $rootScope.$watch(path, function(newVal){
       $rootScope.activetab = newVal;
     });
-  }]);
+  });

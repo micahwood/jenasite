@@ -1,22 +1,10 @@
 'use strict';
 
 angular.module('jenasiteApp')
-  .controller('GalleryCtrl', function ($scope, images) {
+  .controller('GalleryCtrl', function ($scope, images, Lightbox) {
     $scope.images = images.data;
-  })
-  .directive('jenaVenobox', function(){
-    
-    return {
-      restrict: 'A',
-      link: function($scope, iElm) {
-        iElm.venobox();
 
-        iElm.on('mouseenter', function() {
-          iElm.parent().children().addClass('fade');
-          iElm.removeClass('fade');
-        }).on('mouseleave', function() {
-          iElm.parent().children().removeClass('fade');
-        });
-      }
+    $scope.openLightboxModal = function(index) {
+      Lightbox.openModal($scope.images, index);
     };
   });
