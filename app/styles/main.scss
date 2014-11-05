@@ -1,9 +1,7 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
-
-@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+$icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
 // bower:scss
-@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
 @import "animation";
@@ -50,6 +48,12 @@ body {
   img {
     padding: 20px;
   }
+}
+
+a.thumbnailLink {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
 #gallery {
@@ -100,14 +104,14 @@ div.resume-body {
   background-color: transparent;
   border-bottom: 3px solid #f00;
   text-transform: uppercase;
+  height: 83px;
 
   .navbar-brand {
     color: #000;
     letter-spacing: 8px;
     padding: 30px;
     padding-right: 0;
-    position: relative;
-    top: 18px;
+    margin-top: 18px;
     font-size: 34px;
   }
 
