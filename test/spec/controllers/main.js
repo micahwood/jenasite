@@ -10,7 +10,7 @@ describe('Controller: GalleryCtrl', function () {
   beforeEach(module('jenasiteApp'));
 
   imageMock = {
-    data: [{"title":"Hello World","url":"image.jpg","thumbnail":"thumb.jpg"}]
+    data: [{'title':'Hello World','url':'image.jpg','thumbnail':'thumb.jpg'}]
   };
 
   // Initialize the controller and a mock scope
