@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('jenasiteApp').factory('galleryLibrary', function($http) {
+angular.module('jenasiteApp').factory('galleryLibrary', function($http, ENV) {
+  var path = (ENV === 'development') ? '/images.json' : '/image';
   return {
     getImages: function() {
-      return $http.get('/image').success(function(data) {
+      return $http.get(path).success(function(data) {
         return data;
       });
     }

@@ -2,6 +2,7 @@
 
 angular
   .module('jenasiteApp', [
+    'config',
     'ngResource',
     'ngRoute',
     'ngAnimate',
