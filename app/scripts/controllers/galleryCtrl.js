@@ -2,14 +2,15 @@
 
 angular.module('jenasiteApp')
   .controller('GalleryCtrl', function ($scope, images, Lightbox) {
-    var selectedImage;
-    this.images = images.data;
+    var vm = this,
+        selectedImage;
+    vm.images = images.data;
 
-    this.openLightboxModal = function(index) {
-      Lightbox.openModal(this.images, index);
+    vm.openLightboxModal = function(index) {
+      Lightbox.openModal(vm.images, index);
     };
 
-    this.setImage = function(image) {
+    vm.setImage = function(image) {
       if (image) {
         selectedImage = image;
       } else {
@@ -17,7 +18,7 @@ angular.module('jenasiteApp')
       }
     };
 
-    this.toggleFade = function(image) {
+    vm.toggleFade = function(image) {
       if (selectedImage) {
         return image !== selectedImage;
       }
