@@ -1,0 +1,13 @@
+#loading-bar .bar {
+  height: 5px;
+  background: #f00;
+}
+
+#loading-bar .peg {
+  box-shadow: 1px 0 6px 1px #f00;
+}
+
+#loading-bar-spinner .spinner-icon {
+  border-top-color: #f00;
+  border-left-color: #f00;
+}
