@@ -148,13 +148,13 @@ div.resume-body {
 
 @media all and (max-width: 760px) {
   .view-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
   .view-frame.ng-enter, .view-frame.ng-leave {
-    left: 20px;
-    right: 20px;
+    left: 20px !important;
+    right: 20px !important;
   }
 
   #thumbs img {
