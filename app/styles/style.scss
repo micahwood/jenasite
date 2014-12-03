@@ -20,10 +20,11 @@ body {
 
 #foreground {
   position: fixed;
+  width: 100%;
   background-color: #fff;
   height: 80px;
   top: 0;
-  right: 0;
+  left: 18px;
   z-index: 10;
 }
 
@@ -31,22 +32,21 @@ body {
 
   a {
     transition: opacity 1s;
-  }
 
-  a:hover {
-    text-decoration: none;
-  }
+    &.thumbnailLink > img {
+      position: relative;
+      padding: 20px;
+      width: 240px;
+      height: auto;
+      display: inline-block;
+    }
 
-  img {
-    padding: 20px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
-a.thumbnailLink > img {
-  position: relative;
-  width: 240px;
-  height: 240px;
-}
 
 #gallery {
   padding-bottom: 30px;
@@ -142,7 +142,7 @@ div.resume-body {
 
 @media all and (max-width: 990px) {
   #thumbs img {
-    padding: 15px;
+    padding: 15px !important;
   }
 }
 
@@ -158,22 +158,13 @@ div.resume-body {
   }
 
   #thumbs img {
-    padding: 3px;
+    padding: 3px !important;
   }
   #thumbs {
     text-align: center;
   }
-  #foreground {
-    width: 97%;
-  }
   .navbar-stack {
     position: initial !important;
-  }
-}
-
-@media all and (max-width: 460px) {
-  #thumbs img {
-    width: 70%;
   }
 }
 
