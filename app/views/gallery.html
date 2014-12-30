@@ -1,5 +1,5 @@
 <section id="thumbs">
-  <a class="thumbnailLink" ng-repeat="img in vm.images" title="{{img.title}}" ng-click="vm.openLightboxModal($index)" ng-class="{fade: vm.toggleFade(img)}">
+  <a class="thumbnailLink" ng-repeat="img in vm.images" title="{{img.title}}" ng-click="vm.openLightboxModal($index)" ng-class="{fadeImg: vm.toggleFade(img)}">
     <img class="img-responsive" ng-src="{{img.thumbnail}}" ng-mouseenter="vm.setImage(img)" ng-mouseleave="vm.setImage()">
   </a>
 </section>

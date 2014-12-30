@@ -14,10 +14,6 @@ body {
   padding-top: 120px;
 }
 
-.fade {
-  opacity: 0.57;
-}
-
 #foreground {
   position: fixed;
   width: 100%;
@@ -31,7 +27,6 @@ body {
 #thumbs {
 
   a {
-    transition: opacity 1s;
     cursor: pointer;
 
     &.thumbnailLink > img {
