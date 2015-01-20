@@ -26,7 +26,7 @@
   <body ng-app="jenasiteApp">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" ng-click="toggleCollapse()">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -37,7 +37,7 @@
     </div>
 
     <section class="col-lg-3 col-md-4 col-sm-4">
-      <nav class="navbar-collapse collapse">
+      <nav class="navbar-collapse collapse" collapse="isCollapsed">
         <ul class="nav navbar-stack fixed">
           <li ng-class="{active: activetab=='/work'}"><a href="/work">Work</a></li>
           <li ng-class="{active: activetab=='/about'}"><a href="/about">About</a></li>
@@ -73,9 +73,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>

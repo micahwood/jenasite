@@ -55,4 +55,8 @@ angular
     $rootScope.$watch(path, function(newVal){
       $rootScope.activetab = newVal;
     });
+    $rootScope.isCollapsed = true;
+    $rootScope.toggleCollapse = function() {
+      $rootScope.isCollapsed = !$rootScope.isCollapsed;
+    }
   });
