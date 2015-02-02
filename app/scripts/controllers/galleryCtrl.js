@@ -3,6 +3,7 @@
 angular.module('jenasiteApp')
   .controller('GalleryCtrl', function ($scope, images, Lightbox) {
     var vm = this,
+        shouldFade = false,
         selectedImage;
     vm.images = images.data;
 
@@ -19,8 +20,10 @@ angular.module('jenasiteApp')
     };
 
     vm.toggleFade = function(image) {
-      if (selectedImage) {
-        return image !== selectedImage;
-      }
+      return shouldFade && image !== selectedImage;
+    };
+
+    vm.fadeImages = function(state) {
+      shouldFade = state;
     };
   });

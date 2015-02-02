@@ -58,5 +58,5 @@ angular
     $rootScope.isCollapsed = true;
     $rootScope.toggleCollapse = function() {
       $rootScope.isCollapsed = !$rootScope.isCollapsed;
-    }
+    };
   });
