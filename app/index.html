@@ -39,7 +39,14 @@
     <section class="col-lg-3 col-sm-4">
       <nav class="navbar-collapse collapse" collapse="isCollapsed">
         <ul class="nav navbar-stack fixed">
-          <li ng-class="{active: activetab=='/work'}"><a href="/work">Work</a></li>
+          <li ng-class="{active: activetab.startsWith('/work')}" dropdown>
+            <a href="/work" dropdown-toggle>Work</a>
+            <ul class="dropdown-menu" role="menu">
+              <li ng-class="{active: activetab=='/work'}"><a href="/work">Current</a></li>
+              <li ng-class="{active: activetab=='/work/past'}"><a href="/work/past">Past</a></li>
+              <li ng-class="{active: activetab=='/work/installed'}"><a href="/work/installed">Installed</a></li>
+            </ul>
+          </li>
           <li ng-class="{active: activetab=='/about'}"><a href="/about">About</a></li>
           <li ng-class="{active: activetab=='/cv'}"><a href="/cv">CV</a></li>
         </ul>

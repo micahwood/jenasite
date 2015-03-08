@@ -32,13 +32,13 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
       })
-      .when('/work', {
+      .when('/work/:category?', {
         templateUrl: 'views/gallery.html',
         controller: 'GalleryCtrl as vm',
         resolve: {
-          images: ['galleryLibrary', function(galleryLibrary) {
-            return galleryLibrary.getImages();
-          }]
+          images: function($route, galleryLibrary) {
+            return galleryLibrary.getImages($route.current.params.category);
+          }
         }
       })
       .when('/about', {
