@@ -1,7 +1,3 @@
-* {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif !important;
-}
-
 html {
   overflow-y: scroll;
 }
@@ -10,7 +6,6 @@ body {
   background: url('/images/backstripe.png') no-repeat;
   background-position-y: -30px;
   background-attachment: fixed;
-  font-size: 18px;
   padding-top: 120px;
 }
 
@@ -25,16 +20,22 @@ body {
 }
 
 #thumbs {
-
+  text-align: center;
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
   a {
     cursor: pointer;
 
     &.thumbnailLink > img {
       position: relative;
-      padding: 20px;
+      padding: 3px;
       width: 240px;
       height: auto;
       display: inline-block;
+      @include breakpoint(tablet) {
+        padding: 20px;
+      }
     }
 
     &:hover {
@@ -100,7 +101,13 @@ div.resume-body {
     padding: 30px;
     padding-right: 0;
     margin-top: 18px;
-    font-size: 34px;
+    font-size: 18px;
+    @include breakpoint(380px) {
+      font-size: 28px;
+    }
+    @include breakpoint(410px) {
+      font-size: 34px;
+    }
   }
 
   .navbar-toggle {
@@ -136,48 +143,14 @@ div.resume-body {
   color: #f00;
 }
 
-.dropdown-menu {
-  top: 0px;
-  left: 70px;
-  margin-top: 0;
-}
-
-@media all and (max-width: 990px) {
-  #thumbs img {
-    padding: 15px !important;
-  }
-}
-
 @media all and (max-width: 760px) {
-  .view-container {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
 
   .view-frame.ng-enter, .view-frame.ng-leave {
     left: 20px !important;
     right: 20px !important;
   }
 
-  #thumbs img {
-    padding: 3px !important;
-  }
-  #thumbs {
-    text-align: center;
-  }
   .navbar-stack {
     position: initial !important;
-  }
-}
-
-@media all and (max-width: 410px) {
-  .navbar .navbar-brand {
-    font-size: 28px;
-  }
-}
-
-@media all and (max-width: 320px) {
-  .navbar .navbar-brand {
-    font-size: 18px;
   }
 }

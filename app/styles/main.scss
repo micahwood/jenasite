@@ -1,4 +1,9 @@
-@import 'style';
-@import 'animation';
-@import 'lightbox';
-@import 'loadingbar';
+@import 'variables';
+@import 'mixins';
+
+@import 'vendor/bootstrap';
+
+@import 'partials/style';
+@import 'partials/animation';
+@import 'partials/lightbox';
+@import 'partials/loadingbar';
