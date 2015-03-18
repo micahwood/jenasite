@@ -1,0 +1,28 @@
+#thumbs {
+  text-align: center;
+  @include breakpoint(tablet) {
+    text-align: left;
+  }
+  a {
+    cursor: pointer;
+
+    &.thumbnailLink > img {
+      position: relative;
+      padding: 3px;
+      width: 240px;
+      height: auto;
+      display: inline-block;
+      @include breakpoint(tablet) {
+        padding: 20px;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#gallery {
+  padding-bottom: 30px;
+}

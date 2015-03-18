@@ -16,47 +16,14 @@ body {
   height: 80px;
   top: 0;
   left: 18px;
-  z-index: 10;
-}
-
-#thumbs {
-  text-align: center;
-  @include breakpoint(tablet) {
-    text-align: left;
-  }
-  a {
-    cursor: pointer;
-
-    &.thumbnailLink > img {
-      position: relative;
-      padding: 3px;
-      width: 240px;
-      height: auto;
-      display: inline-block;
-      @include breakpoint(tablet) {
-        padding: 20px;
-      }
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-
-#gallery {
-  padding-bottom: 30px;
+  z-index: 100;
 }
 
 #resume, #bio {
-  // padding: 0 15px;
-  height: 100%;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-div.resume-body {
+.resume-body {
   line-height: 1em;
   padding-bottom: 65px;
 

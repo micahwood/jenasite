@@ -1,15 +1,15 @@
 @mixin respond-to($media) {
   @if $media == handhelds {
-    @media only screen and (max-width: 479px) { @content; }
+    @media only screen and (max-width: $screen-xs - 1) { @content; }
   }
   @else if $media == wide-handhelds {
-    @media only screen and (min-width: 480px) and (max-width: 767px) { @content; }
+    @media only screen and (min-width: $screen-xs) and (max-width: $screen-sm) { @content; }
   }
   @else if $media == tablets {
-    @media only screen and (min-width: 768px) and (max-width: 959px) { @content; }
+    @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) { @content; }
   }
   @else if $media == mobileonly {
-    @media only screen and (max-width: 768px) { @content; }
+    @media only screen and (max-width: $screen-sm-min) { @content; }
   }
 }
 

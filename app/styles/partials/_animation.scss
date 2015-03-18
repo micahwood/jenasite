@@ -3,70 +3,33 @@
   padding-left: 20px;
   padding-right: 20px;
   @include breakpoint(tablet) {
-      padding-left: 0;
-      padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .view-frame {
-  &.ng-enter, &.ng-leave {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    right: 20px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  @include breakpoint(tablet) {
+    left: 0;
+    right: 0;
   }
   &.ng-enter {
-    animation: 0.8s fade-in-down;
-    z-index: 100;
+    animation: fade-in-down 1s ease 1s both;
   }
   &.ng-leave {
-    animation: 0.8s fade-out-up;
-    z-index:99;
-  }
-  @include breakpoint(tablet) {
-    &.ng-enter, &.ng-leave {
-      left: 0;
-      right: 0;
-    }
+    animation: fade-out-up 0.5s ease 0 both;
   }
 }
 
 .fadeImg {
-  animation: 0.8s fade-out forwards;
+  animation: fade-out 0.8s both;
 }
 
 .fadeImg-remove.fadeImg-remove-active {
-  animation: 0.8s fade-in forwards;
-}
-
-@keyframes fade-in-down {
-  from {
-    opacity: 0;
-    transform: translate(0px,-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-}
-
-@keyframes fade-out-up {
-  from {
-    opacity: 1;
-    transform: translate(0px,0px);
-  }
-  to {
-    opacity: 0;
-    transform: translate(0px,-15px);
-  }
-}
-
-@keyframes fade-in {
-  from { opacity: 0.57; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0.57; }
+  animation: fade-in 0.8s both;
 }

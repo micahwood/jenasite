@@ -50,15 +50,18 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  }).run(function($rootScope, $location, $window){
+  }).run(function($rootScope, $location, $window, $timeout){
     var path = function() { return $location.path();};
-    var track = function() {
+    var handleRouteChange = function() {
       $window.ga('send', 'pageview', {page: path()});
+      $timeout(function () {
+        $window.scrollTo(0,0);
+      }, 500);
     };
     $rootScope.$watch(path, function(newVal){
       $rootScope.activetab = newVal;
     });
-    $rootScope.$on('$routeChangeSuccess', track);
+    $rootScope.$on('$routeChangeSuccess', handleRouteChange);
     $rootScope.isCollapsed = true;
     $rootScope.toggleCollapse = function() {
       $rootScope.isCollapsed = !$rootScope.isCollapsed;
