@@ -1,24 +1,34 @@
 .view-container {
   position: relative;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include breakpoint(tablet) {
+      padding-left: 0;
+      padding-right: 0;
+  }
 }
 
-.view-frame.ng-enter, .view-frame.ng-leave {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.view-frame.ng-enter {
-  animation: 0.8s fade-in-down;
-  z-index: 100;
-}
-
-.view-frame.ng-leave {
-  animation: 0.8s fade-out-up;
-  z-index:99;
+.view-frame {
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+  }
+  &.ng-enter {
+    animation: 0.8s fade-in-down;
+    z-index: 100;
+  }
+  &.ng-leave {
+    animation: 0.8s fade-out-up;
+    z-index:99;
+  }
+  @include breakpoint(tablet) {
+    &.ng-enter, &.ng-leave {
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
 .fadeImg {

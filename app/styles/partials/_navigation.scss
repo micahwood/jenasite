@@ -1,0 +1,111 @@
+li.dropdown {
+  padding-right: 24px;
+  @include breakpoint(tablet) {
+    &:hover {
+      > ul.dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.navbar {
+  z-index: 1000;
+  border-radius: 1px;
+  background-color: transparent;
+  border-bottom: 3px solid #f00;
+  text-transform: uppercase;
+  height: 83px;
+
+  .navbar-brand {
+    color: #000;
+    letter-spacing: 8px;
+    padding: 30px;
+    padding-right: 0;
+    margin-top: 18px;
+    font-size: 18px;
+    @include breakpoint(380px) {
+      font-size: 28px;
+    }
+    @include breakpoint(410px) {
+      font-size: 34px;
+    }
+  }
+
+  .navbar-toggle {
+    top: 35px;
+
+    .icon-bar {
+      background-color: #000;
+    }
+  }
+}
+
+.navbar-stack {
+  li {
+    a {
+      color: #000;
+      text-transform: uppercase;
+      padding: 0;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: none;
+  left: 83px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  > .active > a {
+    color: #000 !important;
+  }
+}
+@media (max-width: $grid-float-breakpoint-max) {
+  .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    > li > a,
+    .dropdown-header {
+      padding: 5px 15px 5px 25px;
+    }
+    > li > a {
+      line-height: $line-height-computed;
+      &:hover,
+      &:focus {
+        background-image: none;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  padding-left: 20px;
+}
+
+.navbar-stack > li.active > a,
+.navbar-stack > li.active > a:hover,
+.navbar-stack > li > a:hover,
+.dropdown-menu > li.active > a,
+.dropdown-menu > li.active > a:hover,
+.dropdown-menu > li > a:hover,
+ {
+  background-color: transparent;
+}
+
+.navbar-stack > li.active > a:after,
+.navbar-stack > li.active > a:hover:after,
+.navbar-stack > li > a:hover:after,
+.dropdown-menu > li.active > a:after,
+.dropdown-menu > li.active > a:hover:after,
+.dropdown-menu > li > a:hover:after, {
+  content: ' >';
+  color: #f00;
+}
