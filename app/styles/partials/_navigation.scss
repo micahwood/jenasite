@@ -31,6 +31,7 @@
 }
 
 .navbar-stack {
+  position: fixed;
   li {
     a {
       color: #000;
@@ -38,6 +39,9 @@
       padding: 0;
       letter-spacing: 2px;
     }
+  }
+  @include respond-to(mobileonly) {
+    position: initial;
   }
 }
 

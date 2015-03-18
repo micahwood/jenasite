@@ -9,10 +9,6 @@
 }
 
 .view-frame {
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
   z-index: 10;
   @include breakpoint(tablet) {
     left: 0;
@@ -27,9 +23,9 @@
 }
 
 .fadeImg {
-  animation: fade-out 0.8s both;
+  animation: fade-out 0.8s forwards;
 }
 
 .fadeImg-remove.fadeImg-remove-active {
-  animation: fade-in 0.8s both;
+  animation: fade-in 0.8s forwards;
 }
