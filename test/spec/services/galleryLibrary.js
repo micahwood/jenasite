@@ -9,7 +9,7 @@ describe('Service: GalleryLibrary', function() {
 
   beforeEach(inject(function($httpBackend, galleryLibrary, imagesJson) {
     httpBackend = $httpBackend;
-    $httpBackend.whenGET('/images.json').respond(imagesJson);
+    $httpBackend.whenGET(/\/images\.json.+/).respond(imagesJson);
     Service = galleryLibrary;
   }));
 
